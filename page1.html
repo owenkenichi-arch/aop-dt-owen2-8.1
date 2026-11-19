@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://uploads.onecompiler.io/452m7vhce/45958prad/lauren.png" type="image/png">
+  <title>CV Nelson Lai</title>
+  <style>
+:root {
+  color-scheme: light;
+  --nelson-ink: #3a2a2a;
+  --nelson-muted: #71645f;
+  --nelson-accent: #a64b35;
+  --nelson-accent-soft: #f1d8c9;
+  --nelson-fill: #f4eae2;
+  --nelson-page: #ede2d7;
+  --nelson-line: 1px solid var(--nelson-ink);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 8px;
+  background: var(--nelson-page);
+  color: var(--nelson-ink);
+  font-family: "Source Sans 3", system-ui, sans-serif;
+}
+
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; }
+h2 { color: var(--nelson-accent); }
+p, li { color: var(--nelson-muted); }
+
+.nelson-page {
+  container-type: inline-size;
+  width: 100%;
+  max-width: 794px;
+  margin: 0 auto;
+}
+
+.nelson-cv {
+  --nelson-u: calc(100cqw / 794);
+  display: grid;
+  grid-template-rows: calc(52 * var(--nelson-u)) calc(246 * var(--nelson-u)) calc(530 * var(--nelson-u)) 1fr;
+  width: 100%;
+  height: calc(1123 * var(--nelson-u));
+  overflow: hidden;
+  border: var(--nelson-line);
+  background: #fff;
+  font-size: calc(13 * var(--nelson-u));
+  line-height: calc(18 * var(--nelson-u));
+}
+
+.nelson-cv > * { border-bottom: var(--nelson-line); }
+.nelson-cv > .nelson-bottom { border-bottom: 0; }
+
+.nelson-title { padding: calc(6 * var(--nelson-u)) calc(8 * var(--nelson-u)) 0; }
+.nelson-title h1 { font-size: calc(19 * var(--nelson-u)); line-height: calc(24 * var(--nelson-u)); }
+.nelson-title p { color: var(--nelson-accent); font-size: calc(12 * var(--nelson-u)); font-weight: 600; line-height: calc(16 * var(--nelson-u)); }
+
+.nelson-header {
+  display: grid;
+  grid-template-columns: calc(262 * var(--nelson-u)) 1fr;
+  border-top: var(--nelson-line);
+}
+
+.nelson-photo, .nelson-small-img {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  background: var(--nelson-fill);
+}
+
+.nelson-photo { border-right: var(--nelson-line); }
+.nelson-photo a { position: absolute; inset: 0; display: block; }
+.nelson-photo img, .nelson-small-img img, .nelson-project img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nelson-photo img { object-position: center 30%; }
+.nelson-profile { display: flex; flex-direction: column; padding: calc(32 * var(--nelson-u)) calc(6 * var(--nelson-u)) 0; }
+.nelson-profile h2, .nelson-cell h2, .nelson-intro h2 { font-size: calc(15 * var(--nelson-u)); line-height: calc(20 * var(--nelson-u)); }
+.nelson-profile p { margin-top: calc(7 * var(--nelson-u)); }
+.nelson-small-img {
+  width: calc(144 * var(--nelson-u));
+  height: calc(78 * var(--nelson-u));
+  margin-top: auto;
+  border: var(--nelson-line);
+  border-bottom: 0;
+}
+
+.nelson-middle {
+  display: grid;
+  grid-template-columns: calc(341 * var(--nelson-u)) 1fr;
+  grid-template-rows: calc(262 * var(--nelson-u)) calc(268 * var(--nelson-u));
+}
+.nelson-cell { padding: 0 calc(8 * var(--nelson-u)); }
+.nelson-contact {
+  display: flex;
+  grid-column: 1;
+  grid-row: 1;
+  flex-direction: column;
+  padding-top: calc(2 * var(--nelson-u));
+  border-right: var(--nelson-line);
+  border-bottom: var(--nelson-line);
+}
+.nelson-contact-list { display: grid; gap: calc(7 * var(--nelson-u)); margin-top: calc(14 * var(--nelson-u)); padding: 0; list-style: none; }
+.nelson-contact-list li { overflow-wrap: anywhere; }
+.nelson-squares { display: flex; justify-content: space-between; margin-top: auto; padding: 0 calc(13 * var(--nelson-u)) calc(45 * var(--nelson-u)); }
+.nelson-squares span {
+  display: grid;
+  width: calc(37 * var(--nelson-u));
+  height: calc(37 * var(--nelson-u));
+  place-items: center;
+  border: var(--nelson-line);
+  color: var(--nelson-ink);
+  font-size: calc(11 * var(--nelson-u));
+  font-weight: 700;
+}
+
+.nelson-skill {
+  display: grid;
+  grid-column: 1;
+  grid-row: 2;
+  grid-template-columns: 1fr auto;
+  column-gap: calc(10 * var(--nelson-u));
+  padding-top: calc(25 * var(--nelson-u));
+  padding-right: calc(29 * var(--nelson-u));
+  border-right: var(--nelson-line);
+}
+.nelson-skill-text p { margin-top: calc(3 * var(--nelson-u)); }
+.nelson-bullets { margin-top: calc(15 * var(--nelson-u)); padding-left: calc(18 * var(--nelson-u)); }
+.nelson-bullets li { margin-bottom: calc(10 * var(--nelson-u)); }
+.nelson-ring {
+  --nelson-ring-size: calc(118 * var(--nelson-u));
+  position: relative;
+  display: grid;
+  flex: none;
+  width: var(--nelson-ring-size);
+  height: var(--nelson-ring-size);
+  place-items: center;
+  border: var(--nelson-line);
+  border-radius: 50%;
+  background: conic-gradient(var(--nelson-accent) calc(var(--nelson-p) * 1%), var(--nelson-accent-soft) 0);
+}
+.nelson-ring-25 { --nelson-p: 25; }
+.nelson-ring-75 { --nelson-p: 75; }
+.nelson-ring-50 { --nelson-p: 50; }
+.nelson-ring::before { position: absolute; inset: calc(9 * var(--nelson-u)); border-radius: 50%; background: #fff; content: ""; }
+.nelson-ring span { position: relative; text-align: center; font-weight: 700; line-height: 1.2; }
+.nelson-ring small { display: block; color: var(--nelson-muted); font-size: calc(10 * var(--nelson-u)); font-weight: 400; }
+.nelson-ring-big { --nelson-ring-size: calc(135 * var(--nelson-u)); margin-top: calc(27 * var(--nelson-u)); }
+
+.nelson-main-info {
+  display: flex;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  flex-direction: column;
+  padding-top: calc(4 * var(--nelson-u));
+  padding-bottom: calc(34 * var(--nelson-u));
+}
+.nelson-main-info > h2 { margin-bottom: calc(14 * var(--nelson-u)); }
+.nelson-contests { margin-top: calc(6 * var(--nelson-u)); }
+.nelson-second-title { margin-top: calc(10 * var(--nelson-u)); color: var(--nelson-accent); font-size: calc(14 * var(--nelson-u)); }
+.nelson-meta { margin-top: calc(9 * var(--nelson-u)); color: var(--nelson-accent); font-weight: 600; }
+.nelson-long { margin-top: calc(5 * var(--nelson-u)); line-height: calc(21 * var(--nelson-u)); }
+.nelson-circles { display: flex; align-items: flex-end; gap: calc(35 * var(--nelson-u)); margin-top: auto; padding-left: calc(12 * var(--nelson-u)); }
+.nelson-second-ring { margin-bottom: calc(12 * var(--nelson-u)); }
+
+.nelson-bottom {
+  display: grid;
+  grid-template-columns: calc(151 * var(--nelson-u)) calc(15 * var(--nelson-u)) calc(197 * var(--nelson-u)) calc(40 * var(--nelson-u)) calc(345 * var(--nelson-u));
+  grid-template-rows: calc(52 * var(--nelson-u)) calc(56 * var(--nelson-u)) 1fr;
+  padding: 0 calc(30 * var(--nelson-u)) calc(8 * var(--nelson-u)) calc(16 * var(--nelson-u));
+}
+.nelson-intro { grid-column: 1 / 4; grid-row: 1 / span 2; padding-top: calc(4 * var(--nelson-u)); }
+.nelson-intro p { margin-top: calc(3 * var(--nelson-u)); }
+.nelson-project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: calc(10 * var(--nelson-u));
+  border: var(--nelson-line);
+  background: var(--nelson-fill);
+}
+.nelson-project img { object-position: center; }
+.nelson-project h3 { position: relative; z-index: 1; padding: calc(4 * var(--nelson-u)); background: rgb(255 255 255 / 90%); font-size: calc(12 * var(--nelson-u)); line-height: 1.3; }
+.nelson-project-one { grid-column: 1; grid-row: 3; }
+.nelson-project-two { grid-column: 3; grid-row: 3; }
+.nelson-project-three { grid-column: 5; grid-row: 2 / span 2; }
+
+@media (max-width: 600px) {
+  body { padding: 10px; }
+  .nelson-cv { display: block; height: auto; overflow: visible; font-size: 15px; line-height: 1.5; }
+  .nelson-title { padding: 12px 14px; }
+  .nelson-title h1 { font-size: 24px; line-height: 1.2; }
+  .nelson-title p { font-size: 13px; line-height: 1.4; }
+  .nelson-header { grid-template-columns: 38% 1fr; min-height: 230px; }
+  .nelson-profile { padding: 18px 12px 0; }
+  .nelson-profile h2, .nelson-cell h2, .nelson-intro h2 { font-size: 18px; line-height: 1.25; }
+  .nelson-profile p { font-size: 13px; }
+  .nelson-small-img { width: 100px; height: 62px; }
+  .nelson-middle { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; }
+  .nelson-cell { padding: 14px; }
+  .nelson-contact { min-height: 185px; }
+  .nelson-contact-list { font-size: 12px; }
+  .nelson-squares { padding: 15px 0 0; }
+  .nelson-skill { min-height: 185px; grid-column: 2; grid-row: 1; grid-template-columns: 1fr; padding-right: 14px; border-bottom: var(--nelson-line); }
+  .nelson-skill .nelson-ring { position: absolute; width: 72px; height: 72px; margin: 60px 0 0 105px; }
+  .nelson-ring::before { inset: 7px; }
+  .nelson-ring small { font-size: 9px; }
+  .nelson-main-info { grid-column: 1 / -1; grid-row: 2; min-height: 390px; padding: 15px; }
+  .nelson-main-info > h2 { margin-bottom: 10px; }
+  .nelson-contests { margin-top: 4px; }
+  .nelson-meta { margin-top: 7px; }
+  .nelson-long { line-height: 1.5; }
+  .nelson-circles { gap: 22px; padding: 20px 0 0; }
+  .nelson-circles .nelson-ring { --nelson-ring-size: 95px; }
+  .nelson-circles .nelson-ring small { max-width: 72px; }
+  .nelson-bottom { grid-template-columns: 1fr 1fr; grid-template-rows: auto 150px 150px; gap: 10px; padding: 14px; }
+  .nelson-intro { grid-column: 1 / -1; grid-row: 1; padding: 0 0 5px; }
+  .nelson-project { padding: 7px; }
+  .nelson-project h3 { font-size: 12px; }
+  .nelson-project-one { grid-column: 1; grid-row: 2; }
+  .nelson-project-two { grid-column: 2; grid-row: 2; }
+  .nelson-project-three { grid-column: 1 / -1; grid-row: 3; }
+}
+
+@media (max-width: 380px) {
+  .nelson-middle { grid-template-columns: 1fr; }
+  .nelson-contact { grid-column: 1; grid-row: 1; }
+  .nelson-skill { grid-column: 1; grid-row: 2; }
+  .nelson-main-info { grid-column: 1; grid-row: 3; }
+  .nelson-skill .nelson-ring { margin-left: 135px; }
+}
+
+@media print {
+  @page { size: A4; margin: 0; }
+  body { padding: 0; background: #fff; }
+  .nelson-page { width: 210mm; max-width: none; }
+  .nelson-cv { border: 0; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="nelson-page">
+    <main class="nelson-cv">
+      <header class="nelson-title">
+        <h1>Nelson Lai</h1>
+        <p>Pelajar di Santa Laurensia Suvarna Sutera</p>
+      </header>
+
+
+
+
+      <section class="nelson-header" aria-label="Profil Nelson Lai">
+        <div class="nelson-photo">
+          <a href="index.html" aria-label="Kembali ke halaman CV Owen">
+            <img src="https://uploads.onecompiler.io/452ma52gf/ai-1794892303006/IMG_20261117_120546.jpg" alt="Foto Nelson Lai mengenakan seragam sekolah">
+          </a>
+        </div>
+        <div class="nelson-profile">
+          <h2>Pengenalan</h2>
+          <p>Saya siswa kelas 8 di Santa Laurensia Suvarna Sutera. Dulu saya bersekolah di Pilar bangsa Dan beripindah ke sini pas smp</p>
+        </div>
+      </section>
+
+
+
+
+      <section class="nelson-middle" aria-label="Informasi pendidikan dan pengalaman">
+        <section class="nelson-cell nelson-contact">
+          <h2>Kontak</h2>
+          <ul class="nelson-contact-list">
+            <li>Email: nelson020688@gmail.com</li>
+            <li>Telepon: 0822 8755 3370</li>
+            <li>Instagram: nelson0206</li>
+          </ul>
+          <div class="nelson-squares" aria-label="Jenis kontak">
+            <span aria-label="Email">@</span>
+            <span aria-label="Telepon">TEL</span>
+            <span aria-label="Instagram">IG</span>
+          </div>
+        </section>
+
+
+
+
+        <section class="nelson-cell nelson-skill">
+          <div class="nelson-skill-text">
+            <h2>Keahlian</h2>
+            <p>Yang saya kuasai:</p>
+            <ul class="nelson-bullets">
+              <li>English</li>
+              <li>Piano</li>
+            </ul>
+          </div>
+          <div class="nelson-ring nelson-ring-big nelson-ring-75" aria-label="English 75 persen">
+            <span>75%<small>English</small></span>
+          </div>
+        </section>
+
+
+
+
+        <section class="nelson-cell nelson-main-info">
+          <h2>Pengalaman</h2>
+          <p>Lomba-lomba:</p>
+          <ul class="nelson-bullets nelson-contests">
+            <li>Kejurakab</li>
+            <li>Tanding Di Bandung</li>
+          </ul>
+          <h3 class="nelson-second-title">Pendidikan</h3>
+          <p class="nelson-meta">SD Pilar Bangsa (2019–2025)</p>
+          <p class="nelson-meta">SMP Santa Laurensia Suvarna Sutera (2025–sekarang)</p>
+          <p class="nelson-long">Saat saya sekolah di Pilar Bangsa, saya pernah mendapatkan peringkat 2 di dancing Sekarang saya bersekolah di Santa Laurensia Suvarna Sutera dan menyukai semua pelajaran.</p>
+          <div class="nelson-circles" aria-label="Riwayat pendidikan">
+            <div class="nelson-ring nelson-ring-25" aria-label="Pilar Bangsa"><span>25%<small>Pilar Bangsa</small></span></div>
+            <div class="nelson-ring nelson-second-ring nelson-ring-75" aria-label="Santa Laurensia Suvarna Sutera"><span>75%<small>Santa Laurensia</small></span></div>
+          </div>
+        </section>
+      </section>
+
+
+
+
+      <section class="nelson-bottom" aria-label="Foto-foto kegiatan">
+        <div class="nelson-intro">
+          <h2>Foto-foto</h2>
+          <p>Kegiatan dan pengalaman yang saya ikuti, termasuk konser drum.</p>
+        </div>
+        <article class="nelson-project nelson-project-one">
+          <img src="https://uploads.onecompiler.io/452m9ff5j/459c3tf8s/Screenshot%202026-11-19%20161209.png" alt="Foto bersama teman-teman setelah bermain basket">
+          <h3>Bermain basket bersama teman-teman</h3>
+        </article>
+        <article class="nelson-project nelson-project-two">
+          <img src="https://uploads.onecompiler.io/452m9ff5j/459c3tf8s/Screenshot%202026-11-19%20161215.png" alt="Bersiap bermain basket">
+          <h3>Bersiap sebelum bermain basket</h3>
+        </article>
+        <article class="nelson-project nelson-project-three">
+          <img src="https://uploads.onecompiler.io/452m9ff5j/459c3tf8s/Screenshot%202026-11-19%20161220.png" alt="Aksi bermain basket di lapangan">
+          <h3>Pertandingan basket</h3>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

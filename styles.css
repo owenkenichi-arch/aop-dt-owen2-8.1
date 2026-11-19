@@ -1,0 +1,460 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eaf4ff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0b2545;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+.Owen[data-role~="cv-sheet"] {
+  width: 760px;
+  min-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Owen[data-role~="card"] {
+  background-color: #ffffff;
+  border: 3px solid #0b2545;
+  border-radius: 34px;
+  padding: 18px 20px;
+}
+
+.Owen[data-role~="dot-line"] {
+  position: relative;
+  width: 100%;
+  min-height: 22px;
+  border-bottom: 2px solid #0b2545;
+  padding: 2px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0b2545;
+  outline: none;
+  display: flex;
+  align-items: center;
+}
+
+.Owen[data-role~="dot-line"]::before,
+.Owen[data-role~="dot-line"]::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 6px;
+  height: 6px;
+  background-color: #ff6b00;
+  border-radius: 50%;
+}
+
+.Owen[data-role~="dot-line"]::before {
+  left: 0;
+}
+
+.Owen[data-role~="dot-line"]::after {
+  right: 0;
+}
+
+.Owen[data-role~="dot-line"]:focus {
+  background-color: #fff3e6;
+}
+
+.Owen[data-role~="dot-line"][data-role~="short"] {
+  width: 75%;
+}
+
+.Owen[data-role~="photo-circle"] {
+  display: block;
+  border-radius: 50%;
+  border: 2px solid #0b2545;
+  background-color: #dbeafe;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.Owen[data-role~="photo-circle"]:hover {
+  background-color: #fed7aa;
+}
+
+.Owen[data-role~="photo-circle"] input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.Owen[data-role~="top-pill"] {
+  border-radius: 999px;
+  background-color: #1d70b8;
+  padding: 10px 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 10px 10px 0px #0b2545;
+}
+
+.Owen[data-role~="Owen"] {
+  background-color: #ffffff;
+  border: 2px solid #0b2545;
+  border-radius: 14px;
+  padding: 10px 18px;
+  width: 177px;
+  height: 44px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 14px;
+  box-shadow: 3px 3px 0px #ff6b00;
+  outline: none;
+}
+
+.Owen[data-role~="Owen"]:focus {
+  background-color: #fff3e6;
+}
+
+.Owen[data-role~="top-pill"] .Owen[data-role~="Owen"]:first-child {
+  width: 230px;
+}
+
+.Owen[data-role~="big-circle"] {
+  width: 94px;
+  height: 94px;
+  background-color: #ff8c38;
+  border-width: 2.5px;
+}
+
+.Owen[data-role~="big-circle"] img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Owen[data-role~="middle-columns"] {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.Owen[data-role~="left-col"],
+.Owen[data-role~="right-col"] {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Owen[data-role~="card-l1"] {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Owen[data-role~="circle-row"] {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.Owen[data-role~="small-circle"] {
+  width: 44px;
+  height: 44px;
+}
+
+.Owen[data-role~="small-circle"] img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Owen[data-role~="card-l2"] {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Owen[data-role~="skill-row"] {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.Owen[data-role~="square-strip"] {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.Owen[data-role~="sq"] {
+  width: 26px;
+  height: 24px;
+  border: 1.5px solid #1d70b8;
+  border-right: none;
+  background-color: #f0f7ff;
+}
+
+.Owen[data-role~="sq"]:last-child {
+  border-right: 1.5px solid #1d70b8;
+}
+
+.Owen[data-role~="sq"][data-role~="on"] {
+  background-color: #ff6b00;
+  border-color: #0b2545;
+}
+
+.Owen[data-role~="card-l3"] {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Owen[data-role~="bar-box"] {
+  width: 100%;
+  height: 42px;
+  border: 2px solid #0b2545;
+  background-color: #dbeafe;
+  border-radius: 4px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+
+.Owen[data-role~="bar-box"]:nth-child(2) {
+  background-color: #ffedd5;
+}
+
+.Owen[data-role~="bar-box"]:focus {
+  background-color: #fed7aa;
+}
+
+.Owen[data-role~="card-r1"] {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.Owen[data-role~="exp-row"] {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.Owen[data-role~="small-pill"] {
+  position: relative;
+  width: 90px;
+  height: 36px;
+  margin-top: 12px;
+  border: 2px solid #0b2545;
+  border-radius: 10px;
+  background-color: #ff6b00;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  outline: none;
+}
+
+.Owen[data-role~="exp-row"]:first-child .Owen[data-role~="small-pill"]::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  height: 132px;
+  border-left: 2px dashed #0b2545;
+}
+
+.Owen[data-role~="exp-row"]:last-child {
+  position: relative;
+}
+
+.Owen[data-role~="exp-row"]:last-child::before {
+  content: "";
+  position: absolute;
+  top: 48px;
+  bottom: 0;
+  left: 45px;
+  border-left: 2px dashed #0b2545;
+}
+
+.Owen[data-role~="exp-body"] {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.Owen[data-role~="exp-box"] {
+  width: 100%;
+  height: 58px;
+  border: 2px solid #0b2545;
+  border-radius: 16px;
+  background-color: #dbeafe;
+  padding: 10px 14px;
+  font-weight: 800;
+  font-size: 14px;
+  outline: none;
+}
+
+.Owen[data-role~="exp-box"]:focus {
+  background-color: #fff3e6;
+}
+
+.Owen[data-role~="card-r2"] {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Owen[data-role~="inner-box"] {
+  border: 2.5px solid #0b2545;
+  border-radius: 22px;
+  padding: 12px 14px;
+  background-color: #f4f9ff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.Owen[data-role~="inner-top"] {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.Owen[data-role~="med-circle"] {
+  width: 50px;
+  height: 50px;
+  background-color: #ffedd5;
+}
+
+.Owen[data-role~="med-circle"] img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Owen[data-role~="projects-panel"] {
+  border: 3px solid #0b2545;
+  border-radius: 24px;
+  background-color: #ff7b1c;
+  padding: 10px;
+  box-shadow: 6px 6px 0 #1d70b8;
+}
+
+.Owen[data-role~="projects-title"] {
+  margin: 0 0 8px;
+  color: #0b2545;
+  font-size: 12px;
+  font-weight: 800;
+  outline: none;
+}
+
+.Owen[data-role~="project-cards"] {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.Owen[data-role~="project-card"] {
+  min-width: 0;
+  min-height: 172px;
+  padding: 6px;
+  border: 2px solid #0b2545;
+  border-radius: 12px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Owen[data-role~="project-card"]:nth-child(3) {
+  position: relative;
+}
+
+.Owen[data-role~="project-card"]:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: -35px;
+  bottom: -13px;
+  left: -6px;
+  width: 2px;
+  background-color: #0b2545;
+  z-index: 1;
+}
+
+.Owen[data-role~="project-image"] {
+  height: 82px;
+  flex-shrink: 0;
+  border: 1.5px solid #0b2545;
+  border-radius: 6px;
+  background-color: #dbeafe;
+  color: #1d70b8;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  outline: none;
+}
+
+.Owen[data-role~="project-image"]:focus,
+.Owen[data-role~="project-caption"]:focus,
+.Owen[data-role~="project-line"]:focus,
+.Owen[data-role~="projects-title"]:focus {
+  background-color: #fff3e6;
+}
+
+.Owen[data-role~="project-image"] img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Owen[data-role~="project-caption"] {
+  min-height: 18px;
+  border-bottom: 1.5px solid #0b2545;
+  color: #0b2545;
+  font-size: 11px;
+  font-weight: 800;
+  outline: none;
+}
+
+.Owen[data-role~="project-line"] {
+  min-height: 14px;
+  border-bottom: 1px solid #0b2545;
+  color: #0b2545;
+  font-size: 9px;
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .Owen[data-role~="project-cards"] {
+    gap: 5px;
+  }
+
+  .Owen[data-role~="project-card"] {
+    padding: 4px;
+  }
+
+  .Owen[data-role~="project-image"] {
+    height: 70px;
+    font-size: 9px;
+  }
+}
